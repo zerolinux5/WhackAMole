@@ -54,7 +54,7 @@ const float kMoleHoleOffset = 155.0;
         
         SKSpriteNode *mole1 = [SKSpriteNode spriteNodeWithTexture:self.moleTexture];
         mole1.position = [self convertPoint:CGPointMake(center - kMoleHoleOffset, 85.0)];
-        mole1.zPosition = 999;
+        mole1.zPosition = 2;
         mole1.name = @"Mole";
         mole1.userData = [[NSMutableDictionary alloc] init];
         [self addChild:mole1];
@@ -62,7 +62,7 @@ const float kMoleHoleOffset = 155.0;
         
         SKSpriteNode *mole2 = [SKSpriteNode spriteNodeWithTexture:self.moleTexture];
         mole2.position = [self convertPoint:CGPointMake(center, 85.0)];
-        mole2.zPosition = 999;
+        mole2.zPosition = 2;
         mole2.name = @"Mole";
         mole2.userData = [[NSMutableDictionary alloc] init];
         [self addChild:mole2];
@@ -70,7 +70,7 @@ const float kMoleHoleOffset = 155.0;
         
         SKSpriteNode *mole3 = [SKSpriteNode spriteNodeWithTexture:self.moleTexture];
         mole3.position = [self convertPoint:CGPointMake(center + kMoleHoleOffset, 85.0)];
-        mole3.zPosition = 999;
+        mole3.zPosition = 2;
         mole3.name = @"Mole";
         mole3.userData = [[NSMutableDictionary alloc] init];
         [self addChild:mole3];
@@ -109,8 +109,27 @@ const float kMoleHoleOffset = 155.0;
     return textureAtlas;
 }
 
+- (void)popMole:(SKSpriteNode *)mole
+{
+	SKAction *easeMoveUp = [SKAction moveToY:mole.position.y + mole.size.height duration:0.2f];
+    easeMoveUp.timingMode = SKActionTimingEaseInEaseOut;
+    SKAction *easeMoveDown = [SKAction moveToY:mole.position.y duration:0.2f];
+    easeMoveDown.timingMode = SKActionTimingEaseInEaseOut;
+    SKAction *delay = [SKAction waitForDuration:0.5f];
+    
+    SKAction *sequence = [SKAction sequence:@[easeMoveUp, delay, easeMoveDown]];
+    [mole runAction:sequence];
+}
+
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+    for (SKSpriteNode *mole in self.moles) {
+        if (arc4random() % 3 == 0) {
+            if (!mole.hasActions) {
+                [self popMole:mole];
+            }
+        }
+    }
 }
 
 @end
