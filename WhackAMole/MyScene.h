@@ -10,4 +10,7 @@
 
 @interface MyScene : SKScene
 
+@property (strong, nonatomic) NSMutableArray *moles;
+@property (strong, nonatomic) SKTexture *moleTexture;
+
 @end

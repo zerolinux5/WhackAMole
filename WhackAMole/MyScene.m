@@ -10,6 +10,8 @@
 
 #define IS_WIDESCREEN ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 
+const float kMoleHoleOffset = 155.0;
+
 @implementation MyScene
 
 -(id)initWithSize:(CGSize)size {    
@@ -38,9 +40,52 @@
         lower.zPosition = 3;
         [self addChild:lower];
         
-        // Add more here later...
+        // Load sprites
+        self.moles = [[NSMutableArray alloc] init];
+        SKTextureAtlas *spriteAtlas = [self textureAtlasNamed:@"sprites"];
+        self.moleTexture = [spriteAtlas textureNamed:@"mole_1.png"];
+        
+        
+        float center = 240.0;
+        
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && IS_WIDESCREEN) {
+            center = 284.0;
+        }
+        
+        SKSpriteNode *mole1 = [SKSpriteNode spriteNodeWithTexture:self.moleTexture];
+        mole1.position = [self convertPoint:CGPointMake(center - kMoleHoleOffset, 85.0)];
+        mole1.zPosition = 999;
+        mole1.name = @"Mole";
+        mole1.userData = [[NSMutableDictionary alloc] init];
+        [self addChild:mole1];
+        [self.moles addObject:mole1];
+        
+        SKSpriteNode *mole2 = [SKSpriteNode spriteNodeWithTexture:self.moleTexture];
+        mole2.position = [self convertPoint:CGPointMake(center, 85.0)];
+        mole2.zPosition = 999;
+        mole2.name = @"Mole";
+        mole2.userData = [[NSMutableDictionary alloc] init];
+        [self addChild:mole2];
+        [self.moles addObject:mole2];
+        
+        SKSpriteNode *mole3 = [SKSpriteNode spriteNodeWithTexture:self.moleTexture];
+        mole3.position = [self convertPoint:CGPointMake(center + kMoleHoleOffset, 85.0)];
+        mole3.zPosition = 999;
+        mole3.name = @"Mole";
+        mole3.userData = [[NSMutableDictionary alloc] init];
+        [self addChild:mole3];
+        [self.moles addObject:mole3];
     }
     return self;
+}
+
+- (CGPoint)convertPoint:(CGPoint)point
+{
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        return CGPointMake(32 + point.x*2, 64 + point.y*2);
+    } else {
+        return point;
+    }
 }
 
 - (SKTextureAtlas *)textureAtlasNamed:(NSString *)fileName
