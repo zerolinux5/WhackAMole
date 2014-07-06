@@ -78,6 +78,17 @@ const float kMoleHoleOffset = 155.0;
         
         self.laughAnimation = [self animationFromPlist:@"laughAnim"];
         self.hitAnimation = [self animationFromPlist:@"hitAnim"];
+        
+        // Add score label
+        float margin = 10;
+        
+        self.scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        self.scoreLabel.text = @"Score: 0";
+        self.scoreLabel.fontSize = [self convertFontSize:14];
+        self.scoreLabel.zPosition = 4;
+        self.scoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
+        self.scoreLabel.position = CGPointMake(margin, margin);
+        [self addChild:self.scoreLabel];
     }
     return self;
 }
@@ -114,14 +125,30 @@ const float kMoleHoleOffset = 155.0;
 
 - (void)popMole:(SKSpriteNode *)mole
 {
-    SKAction *easeMoveUp = [SKAction moveToY:mole.position.y + mole.size.height duration:0.2f];
-	easeMoveUp.timingMode = SKActionTimingEaseInEaseOut;
-	SKAction *easeMoveDown = [SKAction moveToY:mole.position.y duration:0.2f];
-	easeMoveDown.timingMode = SKActionTimingEaseInEaseOut;
+    if (self.totalSpawns > 50) return;
+    self.totalSpawns++;
+    
+    // Reset texture of mole sprite
+    mole.texture = self.moleTexture;
+    
+	SKAction *easeMoveUp = [SKAction moveToY:mole.position.y + mole.size.height duration:0.2f];
+    easeMoveUp.timingMode = SKActionTimingEaseInEaseOut;
+    SKAction *easeMoveDown = [SKAction moveToY:mole.position.y duration:0.2f];
+    easeMoveDown.timingMode = SKActionTimingEaseInEaseOut;
+    
+    SKAction *setTappable = [SKAction runBlock:^{
+        [mole.userData setObject:@1 forKey:@"tappable"];
+    }];
+    
+    SKAction *unsetTappable = [SKAction runBlock:^{
+        [mole.userData setObject:@0 forKey:@"tappable"];
+    }];
     
     
-    SKAction *sequence = [SKAction sequence:@[easeMoveUp, self.laughAnimation, easeMoveDown]];
-    [mole runAction:sequence];
+    SKAction *sequence = [SKAction sequence:@[easeMoveUp, setTappable, self.laughAnimation, unsetTappable, easeMoveDown]];
+    [mole runAction:sequence completion:^{
+        [mole removeAllActions];
+    }];
 }
 
 - (SKAction *)animationFromPlist:(NSString *)animPlist
@@ -138,7 +165,64 @@ const float kMoleHoleOffset = 155.0;
     return [SKAction animateWithTextures:animFrames timePerFrame:framesOverOneSecond resize:NO restore:YES]; // 6
 }
 
+- (float)convertFontSize:(float)fontSize
+{
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        return fontSize * 2;
+    } else {
+        return fontSize;
+    }
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    CGPoint touchLocation = [touch locationInNode:self];
+    
+    SKNode *node = [self nodeAtPoint:touchLocation];
+    if ([node.name isEqualToString:@"Mole"]) {
+        SKSpriteNode *mole = (SKSpriteNode *)node;
+        
+        if (![[mole.userData objectForKey:@"tappable"] boolValue]) return;
+        
+        self.score += 10;
+        
+        [mole.userData setObject:@0 forKey:@"tappable"];
+        [mole removeAllActions];
+        
+        SKAction *easeMoveDown = [SKAction moveToY:(mole.position.y - mole.size.height) duration:0.2f];
+        easeMoveDown.timingMode = SKActionTimingEaseInEaseOut;
+        
+        // Slow down the animation by half
+        easeMoveDown.speed = 0.5;
+        
+        SKAction *sequence = [SKAction sequence:@[self.hitAnimation, easeMoveDown]];
+        [mole runAction:sequence];
+    }
+}
+
 -(void)update:(CFTimeInterval)currentTime {
+    if (self.gameOver) return;
+    
+    if (self.totalSpawns >= 50) {
+        
+        SKLabelNode *gameOverLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        gameOverLabel.text = @"Level Complete!";
+        gameOverLabel.fontSize = 48;
+        gameOverLabel.zPosition = 4;
+        gameOverLabel.position = CGPointMake(CGRectGetMidX(self.frame),
+                                             CGRectGetMidY(self.frame));
+        
+        [gameOverLabel setScale:0.1];
+        
+        [self addChild:gameOverLabel];
+        [gameOverLabel runAction:[SKAction scaleTo:1.0 duration:0.5]];
+        
+        self.gameOver = YES;
+        return;
+    }
+    
+    [self.scoreLabel setText:[NSString stringWithFormat:@"Score: %d", self.score]];
     /* Called before each frame is rendered */
     for (SKSpriteNode *mole in self.moles) {
         if (arc4random() % 3 == 0) {

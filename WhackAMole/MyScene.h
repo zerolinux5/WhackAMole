@@ -16,4 +16,9 @@
 @property (strong, nonatomic) SKAction *laughAnimation;
 @property (strong, nonatomic) SKAction *hitAnimation;
 
+@property (strong, nonatomic) SKLabelNode *scoreLabel;
+@property (nonatomic) NSInteger score;
+@property (nonatomic) NSInteger totalSpawns;
+@property (nonatomic) BOOL gameOver;
+
 @end
