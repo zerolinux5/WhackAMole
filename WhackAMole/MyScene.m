@@ -89,6 +89,19 @@ const float kMoleHoleOffset = 155.0;
         self.scoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
         self.scoreLabel.position = CGPointMake(margin, margin);
         [self addChild:self.scoreLabel];
+        
+        self.laughSound = [SKAction playSoundFileNamed:@"laugh.caf" waitForCompletion:NO];
+        self.owSound = [SKAction playSoundFileNamed:@"ow.caf" waitForCompletion:NO];
+        
+        NSURL *url = [[NSBundle mainBundle] URLForResource:@"whack" withExtension:@"caf"];
+        NSError *error = nil;
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+        
+        if (!self.audioPlayer) {
+            NSLog(@"Error creating player: %@", error);
+        }
+        
+        [self.audioPlayer play];
     }
     return self;
 }
@@ -145,7 +158,7 @@ const float kMoleHoleOffset = 155.0;
     }];
     
     
-    SKAction *sequence = [SKAction sequence:@[easeMoveUp, setTappable, self.laughAnimation, unsetTappable, easeMoveDown]];
+    SKAction *sequence = [SKAction sequence:@[easeMoveUp, setTappable, self.laughSound, self.laughAnimation, unsetTappable, easeMoveDown]];
     [mole runAction:sequence completion:^{
         [mole removeAllActions];
     }];
@@ -196,7 +209,7 @@ const float kMoleHoleOffset = 155.0;
         // Slow down the animation by half
         easeMoveDown.speed = 0.5;
         
-        SKAction *sequence = [SKAction sequence:@[self.hitAnimation, easeMoveDown]];
+        SKAction *sequence = [SKAction sequence:@[self.owSound, self.hitAnimation, easeMoveDown]];
         [mole runAction:sequence];
     }
 }

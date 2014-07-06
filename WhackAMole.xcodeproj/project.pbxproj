@@ -18,7 +18,6 @@
 		EAF70BF51969A6750022A67E /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF70BF31969A6750022A67E /* Main_iPad.storyboard */; };
 		EAF70BF81969A6750022A67E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF70BF71969A6750022A67E /* ViewController.m */; };
 		EAF70BFB1969A6750022A67E /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF70BFA1969A6750022A67E /* MyScene.m */; };
-		EAF70BFD1969A6750022A67E /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF70BFC1969A6750022A67E /* Spaceship.png */; };
 		EAF70BFF1969A6750022A67E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF70BFE1969A6750022A67E /* Images.xcassets */; };
 		EAF70C061969A6750022A67E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF70C051969A6750022A67E /* XCTest.framework */; };
 		EAF70C071969A6750022A67E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF70BDC1969A6750022A67E /* Foundation.framework */; };
@@ -36,6 +35,9 @@
 		EAF70C471969A8D70022A67E /* sprites-568.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C3E1969A8D70022A67E /* sprites-568.atlas */; };
 		EAF70C491969AC200022A67E /* laughAnim.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C481969AC200022A67E /* laughAnim.plist */; };
 		EAF70C4B1969AC9E0022A67E /* hitAnim.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C4A1969AC9E0022A67E /* hitAnim.plist */; };
+		EAF70C501969AF300022A67E /* laugh.caf in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C4D1969AF300022A67E /* laugh.caf */; };
+		EAF70C511969AF300022A67E /* ow.caf in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C4E1969AF300022A67E /* ow.caf */; };
+		EAF70C521969AF300022A67E /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C4F1969AF300022A67E /* whack.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +68,6 @@
 		EAF70BF71969A6750022A67E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EAF70BF91969A6750022A67E /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
 		EAF70BFA1969A6750022A67E /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
-		EAF70BFC1969A6750022A67E /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		EAF70BFE1969A6750022A67E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EAF70C041969A6750022A67E /* WhackAMoleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhackAMoleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF70C051969A6750022A67E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -84,6 +85,9 @@
 		EAF70C3E1969A8D70022A67E /* sprites-568.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "sprites-568.atlas"; sourceTree = "<group>"; };
 		EAF70C481969AC200022A67E /* laughAnim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = laughAnim.plist; sourceTree = "<group>"; };
 		EAF70C4A1969AC9E0022A67E /* hitAnim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hitAnim.plist; sourceTree = "<group>"; };
+		EAF70C4D1969AF300022A67E /* laugh.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = laugh.caf; sourceTree = "<group>"; };
+		EAF70C4E1969AF300022A67E /* ow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ow.caf; sourceTree = "<group>"; };
+		EAF70C4F1969AF300022A67E /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 		EAF70BE41969A6750022A67E /* WhackAMole */ = {
 			isa = PBXGroup;
 			children = (
+				EAF70C4C1969AF300022A67E /* Sounds */,
 				EAF70C321969A8D70022A67E /* TextureAtlases */,
 				EAF70BED1969A6750022A67E /* AppDelegate.h */,
 				EAF70BEE1969A6750022A67E /* AppDelegate.m */,
@@ -154,7 +159,6 @@
 				EAF70BF71969A6750022A67E /* ViewController.m */,
 				EAF70BF91969A6750022A67E /* MyScene.h */,
 				EAF70BFA1969A6750022A67E /* MyScene.m */,
-				EAF70BFC1969A6750022A67E /* Spaceship.png */,
 				EAF70BFE1969A6750022A67E /* Images.xcassets */,
 				EAF70BE51969A6750022A67E /* Supporting Files */,
 				EAF70C481969AC200022A67E /* laughAnim.plist */,
@@ -230,6 +234,16 @@
 				EAF70C3E1969A8D70022A67E /* sprites-568.atlas */,
 			);
 			path = WidescreeniPhone;
+			sourceTree = "<group>";
+		};
+		EAF70C4C1969AF300022A67E /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				EAF70C4D1969AF300022A67E /* laugh.caf */,
+				EAF70C4E1969AF300022A67E /* ow.caf */,
+				EAF70C4F1969AF300022A67E /* whack.caf */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,17 +322,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAF70BFD1969A6750022A67E /* Spaceship.png in Resources */,
 				EAF70C4B1969AC9E0022A67E /* hitAnim.plist in Resources */,
 				EAF70BFF1969A6750022A67E /* Images.xcassets in Resources */,
 				EAF70C461969A8D70022A67E /* foreground-568.atlas in Resources */,
 				EAF70C441969A8D70022A67E /* sprites.atlas in Resources */,
 				EAF70C421969A8D70022A67E /* background.atlas in Resources */,
+				EAF70C501969AF300022A67E /* laugh.caf in Resources */,
 				EAF70C491969AC200022A67E /* laughAnim.plist in Resources */,
 				EAF70C411969A8D70022A67E /* sprites-ipad.atlas in Resources */,
 				EAF70C471969A8D70022A67E /* sprites-568.atlas in Resources */,
 				EAF70BF51969A6750022A67E /* Main_iPad.storyboard in Resources */,
 				EAF70C3F1969A8D70022A67E /* background-ipad.atlas in Resources */,
+				EAF70C511969AF300022A67E /* ow.caf in Resources */,
+				EAF70C521969AF300022A67E /* whack.caf in Resources */,
 				EAF70C431969A8D70022A67E /* foreground.atlas in Resources */,
 				EAF70BF21969A6750022A67E /* Main_iPhone.storyboard in Resources */,
 				EAF70C401969A8D70022A67E /* foreground-ipad.atlas in Resources */,

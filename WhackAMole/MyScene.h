@@ -7,6 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface MyScene : SKScene
 
@@ -20,5 +21,9 @@
 @property (nonatomic) NSInteger score;
 @property (nonatomic) NSInteger totalSpawns;
 @property (nonatomic) BOOL gameOver;
+
+@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
+@property (strong, nonatomic) SKAction *laughSound;
+@property (strong, nonatomic) SKAction *owSound;
 
 @end
