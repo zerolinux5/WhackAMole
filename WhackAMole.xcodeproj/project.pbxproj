@@ -25,6 +25,15 @@
 		EAF70C081969A6750022A67E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF70BE01969A6750022A67E /* UIKit.framework */; };
 		EAF70C101969A6750022A67E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C0E1969A6750022A67E /* InfoPlist.strings */; };
 		EAF70C121969A6750022A67E /* WhackAMoleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF70C111969A6750022A67E /* WhackAMoleTests.m */; };
+		EAF70C3F1969A8D70022A67E /* background-ipad.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C341969A8D70022A67E /* background-ipad.atlas */; };
+		EAF70C401969A8D70022A67E /* foreground-ipad.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C351969A8D70022A67E /* foreground-ipad.atlas */; };
+		EAF70C411969A8D70022A67E /* sprites-ipad.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C361969A8D70022A67E /* sprites-ipad.atlas */; };
+		EAF70C421969A8D70022A67E /* background.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C381969A8D70022A67E /* background.atlas */; };
+		EAF70C431969A8D70022A67E /* foreground.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C391969A8D70022A67E /* foreground.atlas */; };
+		EAF70C441969A8D70022A67E /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C3A1969A8D70022A67E /* sprites.atlas */; };
+		EAF70C451969A8D70022A67E /* background-568.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C3C1969A8D70022A67E /* background-568.atlas */; };
+		EAF70C461969A8D70022A67E /* foreground-568.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C3D1969A8D70022A67E /* foreground-568.atlas */; };
+		EAF70C471969A8D70022A67E /* sprites-568.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C3E1969A8D70022A67E /* sprites-568.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +71,15 @@
 		EAF70C0D1969A6750022A67E /* WhackAMoleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WhackAMoleTests-Info.plist"; sourceTree = "<group>"; };
 		EAF70C0F1969A6750022A67E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EAF70C111969A6750022A67E /* WhackAMoleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhackAMoleTests.m; sourceTree = "<group>"; };
+		EAF70C341969A8D70022A67E /* background-ipad.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "background-ipad.atlas"; sourceTree = "<group>"; };
+		EAF70C351969A8D70022A67E /* foreground-ipad.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "foreground-ipad.atlas"; sourceTree = "<group>"; };
+		EAF70C361969A8D70022A67E /* sprites-ipad.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "sprites-ipad.atlas"; sourceTree = "<group>"; };
+		EAF70C381969A8D70022A67E /* background.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = background.atlas; sourceTree = "<group>"; };
+		EAF70C391969A8D70022A67E /* foreground.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = foreground.atlas; sourceTree = "<group>"; };
+		EAF70C3A1969A8D70022A67E /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
+		EAF70C3C1969A8D70022A67E /* background-568.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "background-568.atlas"; sourceTree = "<group>"; };
+		EAF70C3D1969A8D70022A67E /* foreground-568.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "foreground-568.atlas"; sourceTree = "<group>"; };
+		EAF70C3E1969A8D70022A67E /* sprites-568.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "sprites-568.atlas"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +141,7 @@
 		EAF70BE41969A6750022A67E /* WhackAMole */ = {
 			isa = PBXGroup;
 			children = (
+				EAF70C321969A8D70022A67E /* TextureAtlases */,
 				EAF70BED1969A6750022A67E /* AppDelegate.h */,
 				EAF70BEE1969A6750022A67E /* AppDelegate.m */,
 				EAF70BF01969A6750022A67E /* Main_iPhone.storyboard */,
@@ -165,6 +184,46 @@
 				EAF70C0E1969A6750022A67E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EAF70C321969A8D70022A67E /* TextureAtlases */ = {
+			isa = PBXGroup;
+			children = (
+				EAF70C331969A8D70022A67E /* iPad */,
+				EAF70C371969A8D70022A67E /* iPhone */,
+				EAF70C3B1969A8D70022A67E /* WidescreeniPhone */,
+			);
+			path = TextureAtlases;
+			sourceTree = "<group>";
+		};
+		EAF70C331969A8D70022A67E /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				EAF70C341969A8D70022A67E /* background-ipad.atlas */,
+				EAF70C351969A8D70022A67E /* foreground-ipad.atlas */,
+				EAF70C361969A8D70022A67E /* sprites-ipad.atlas */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		EAF70C371969A8D70022A67E /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				EAF70C381969A8D70022A67E /* background.atlas */,
+				EAF70C391969A8D70022A67E /* foreground.atlas */,
+				EAF70C3A1969A8D70022A67E /* sprites.atlas */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		EAF70C3B1969A8D70022A67E /* WidescreeniPhone */ = {
+			isa = PBXGroup;
+			children = (
+				EAF70C3C1969A8D70022A67E /* background-568.atlas */,
+				EAF70C3D1969A8D70022A67E /* foreground-568.atlas */,
+				EAF70C3E1969A8D70022A67E /* sprites-568.atlas */,
+			);
+			path = WidescreeniPhone;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,9 +304,18 @@
 			files = (
 				EAF70BFD1969A6750022A67E /* Spaceship.png in Resources */,
 				EAF70BFF1969A6750022A67E /* Images.xcassets in Resources */,
+				EAF70C461969A8D70022A67E /* foreground-568.atlas in Resources */,
+				EAF70C441969A8D70022A67E /* sprites.atlas in Resources */,
+				EAF70C421969A8D70022A67E /* background.atlas in Resources */,
+				EAF70C411969A8D70022A67E /* sprites-ipad.atlas in Resources */,
+				EAF70C471969A8D70022A67E /* sprites-568.atlas in Resources */,
 				EAF70BF51969A6750022A67E /* Main_iPad.storyboard in Resources */,
+				EAF70C3F1969A8D70022A67E /* background-ipad.atlas in Resources */,
+				EAF70C431969A8D70022A67E /* foreground.atlas in Resources */,
 				EAF70BF21969A6750022A67E /* Main_iPhone.storyboard in Resources */,
+				EAF70C401969A8D70022A67E /* foreground-ipad.atlas in Resources */,
 				EAF70BE91969A6750022A67E /* InfoPlist.strings in Resources */,
+				EAF70C451969A8D70022A67E /* background-568.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

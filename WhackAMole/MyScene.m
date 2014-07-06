@@ -8,42 +8,60 @@
 
 #import "MyScene.h"
 
+#define IS_WIDESCREEN ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
 @implementation MyScene
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
+        // Add background
+        SKTextureAtlas *backgroundAtlas = [self textureAtlasNamed:@"background"];
+        SKSpriteNode *dirt = [SKSpriteNode spriteNodeWithTexture:[backgroundAtlas textureNamed:@"bg_dirt"]];
+        dirt.scale = 2.0;
+        dirt.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        dirt.zPosition = 0;
+        [self addChild:dirt];
         
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        // Add foreground
+        SKTextureAtlas *foregroundAtlas = [self textureAtlasNamed:@"foreground"];
+        SKSpriteNode *upper = [SKSpriteNode spriteNodeWithTexture:[foregroundAtlas textureNamed:@"grass_upper"]];
+        upper.anchorPoint = CGPointMake(0.5, 0.0);
+        upper.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        upper.zPosition = 1;
+        [self addChild:upper];
         
-        myLabel.text = @"Hello, World!";
-        myLabel.fontSize = 30;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
+        SKSpriteNode *lower = [SKSpriteNode spriteNodeWithTexture:[foregroundAtlas textureNamed:@"grass_lower"]];
+        lower.anchorPoint = CGPointMake(0.5, 1.0);
+        lower.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        lower.zPosition = 3;
+        [self addChild:lower];
         
-        [self addChild:myLabel];
+        // Add more here later...
     }
     return self;
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
-    
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
+- (SKTextureAtlas *)textureAtlasNamed:(NSString *)fileName
+{
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
+        if (IS_WIDESCREEN) {
+            // iPhone Retina 4-inch
+            fileName = [NSString stringWithFormat:@"%@-568", fileName];
+        } else {
+            // iPhone Retina 3.5-inch
+            fileName = fileName;
+        }
         
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
+    } else {
+        fileName = [NSString stringWithFormat:@"%@-ipad", fileName];
     }
+    
+    SKTextureAtlas *textureAtlas = [SKTextureAtlas atlasNamed:fileName];
+    
+    return textureAtlas;
 }
 
 -(void)update:(CFTimeInterval)currentTime {
