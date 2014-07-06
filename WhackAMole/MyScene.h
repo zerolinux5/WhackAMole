@@ -13,4 +13,7 @@
 @property (strong, nonatomic) NSMutableArray *moles;
 @property (strong, nonatomic) SKTexture *moleTexture;
 
+@property (strong, nonatomic) SKAction *laughAnimation;
+@property (strong, nonatomic) SKAction *hitAnimation;
+
 @end

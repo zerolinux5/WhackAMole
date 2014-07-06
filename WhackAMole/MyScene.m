@@ -75,6 +75,9 @@ const float kMoleHoleOffset = 155.0;
         mole3.userData = [[NSMutableDictionary alloc] init];
         [self addChild:mole3];
         [self.moles addObject:mole3];
+        
+        self.laughAnimation = [self animationFromPlist:@"laughAnim"];
+        self.hitAnimation = [self animationFromPlist:@"hitAnim"];
     }
     return self;
 }
@@ -111,14 +114,28 @@ const float kMoleHoleOffset = 155.0;
 
 - (void)popMole:(SKSpriteNode *)mole
 {
-	SKAction *easeMoveUp = [SKAction moveToY:mole.position.y + mole.size.height duration:0.2f];
-    easeMoveUp.timingMode = SKActionTimingEaseInEaseOut;
-    SKAction *easeMoveDown = [SKAction moveToY:mole.position.y duration:0.2f];
-    easeMoveDown.timingMode = SKActionTimingEaseInEaseOut;
-    SKAction *delay = [SKAction waitForDuration:0.5f];
+    SKAction *easeMoveUp = [SKAction moveToY:mole.position.y + mole.size.height duration:0.2f];
+	easeMoveUp.timingMode = SKActionTimingEaseInEaseOut;
+	SKAction *easeMoveDown = [SKAction moveToY:mole.position.y duration:0.2f];
+	easeMoveDown.timingMode = SKActionTimingEaseInEaseOut;
     
-    SKAction *sequence = [SKAction sequence:@[easeMoveUp, delay, easeMoveDown]];
+    
+    SKAction *sequence = [SKAction sequence:@[easeMoveUp, self.laughAnimation, easeMoveDown]];
     [mole runAction:sequence];
+}
+
+- (SKAction *)animationFromPlist:(NSString *)animPlist
+{
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:animPlist ofType:@"plist"]; // 1
+    NSArray *animImages = [NSArray arrayWithContentsOfFile:plistPath]; // 2
+    NSMutableArray *animFrames = [NSMutableArray array]; // 3
+    for (NSString *imageName in animImages) { // 4
+        [animFrames addObject:[SKTexture textureWithImageNamed:imageName]]; // 5
+    }
+    
+    float framesOverOneSecond = 1.0f/(float)[animFrames count];
+    
+    return [SKAction animateWithTextures:animFrames timePerFrame:framesOverOneSecond resize:NO restore:YES]; // 6
 }
 
 -(void)update:(CFTimeInterval)currentTime {

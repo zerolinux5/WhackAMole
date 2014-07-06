@@ -34,6 +34,8 @@
 		EAF70C451969A8D70022A67E /* background-568.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C3C1969A8D70022A67E /* background-568.atlas */; };
 		EAF70C461969A8D70022A67E /* foreground-568.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C3D1969A8D70022A67E /* foreground-568.atlas */; };
 		EAF70C471969A8D70022A67E /* sprites-568.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C3E1969A8D70022A67E /* sprites-568.atlas */; };
+		EAF70C491969AC200022A67E /* laughAnim.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C481969AC200022A67E /* laughAnim.plist */; };
+		EAF70C4B1969AC9E0022A67E /* hitAnim.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C4A1969AC9E0022A67E /* hitAnim.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		EAF70C3C1969A8D70022A67E /* background-568.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "background-568.atlas"; sourceTree = "<group>"; };
 		EAF70C3D1969A8D70022A67E /* foreground-568.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "foreground-568.atlas"; sourceTree = "<group>"; };
 		EAF70C3E1969A8D70022A67E /* sprites-568.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "sprites-568.atlas"; sourceTree = "<group>"; };
+		EAF70C481969AC200022A67E /* laughAnim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = laughAnim.plist; sourceTree = "<group>"; };
+		EAF70C4A1969AC9E0022A67E /* hitAnim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hitAnim.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 				EAF70BFC1969A6750022A67E /* Spaceship.png */,
 				EAF70BFE1969A6750022A67E /* Images.xcassets */,
 				EAF70BE51969A6750022A67E /* Supporting Files */,
+				EAF70C481969AC200022A67E /* laughAnim.plist */,
+				EAF70C4A1969AC9E0022A67E /* hitAnim.plist */,
 			);
 			path = WhackAMole;
 			sourceTree = "<group>";
@@ -303,10 +309,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAF70BFD1969A6750022A67E /* Spaceship.png in Resources */,
+				EAF70C4B1969AC9E0022A67E /* hitAnim.plist in Resources */,
 				EAF70BFF1969A6750022A67E /* Images.xcassets in Resources */,
 				EAF70C461969A8D70022A67E /* foreground-568.atlas in Resources */,
 				EAF70C441969A8D70022A67E /* sprites.atlas in Resources */,
 				EAF70C421969A8D70022A67E /* background.atlas in Resources */,
+				EAF70C491969AC200022A67E /* laughAnim.plist in Resources */,
 				EAF70C411969A8D70022A67E /* sprites-ipad.atlas in Resources */,
 				EAF70C471969A8D70022A67E /* sprites-568.atlas in Resources */,
 				EAF70BF51969A6750022A67E /* Main_iPad.storyboard in Resources */,
