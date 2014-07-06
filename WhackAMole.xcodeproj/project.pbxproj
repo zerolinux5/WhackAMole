@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EAF70BDD1969A6750022A67E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF70BDC1969A6750022A67E /* Foundation.framework */; };
+		EAF70BDF1969A6750022A67E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF70BDE1969A6750022A67E /* CoreGraphics.framework */; };
+		EAF70BE11969A6750022A67E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF70BE01969A6750022A67E /* UIKit.framework */; };
+		EAF70BE31969A6750022A67E /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF70BE21969A6750022A67E /* SpriteKit.framework */; };
+		EAF70BE91969A6750022A67E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAF70BE71969A6750022A67E /* InfoPlist.strings */; };
+		EAF70BEB1969A6750022A67E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF70BEA1969A6750022A67E /* main.m */; };
+		EAF70BEF1969A6750022A67E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF70BEE1969A6750022A67E /* AppDelegate.m */; };
+		EAF70BF21969A6750022A67E /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF70BF01969A6750022A67E /* Main_iPhone.storyboard */; };
+		EAF70BF51969A6750022A67E /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF70BF31969A6750022A67E /* Main_iPad.storyboard */; };
+		EAF70BF81969A6750022A67E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF70BF71969A6750022A67E /* ViewController.m */; };
+		EAF70BFB1969A6750022A67E /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF70BFA1969A6750022A67E /* MyScene.m */; };
+		EAF70BFD1969A6750022A67E /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF70BFC1969A6750022A67E /* Spaceship.png */; };
+		EAF70BFF1969A6750022A67E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAF70BFE1969A6750022A67E /* Images.xcassets */; };
+		EAF70C061969A6750022A67E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF70C051969A6750022A67E /* XCTest.framework */; };
+		EAF70C071969A6750022A67E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF70BDC1969A6750022A67E /* Foundation.framework */; };
+		EAF70C081969A6750022A67E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF70BE01969A6750022A67E /* UIKit.framework */; };
+		EAF70C101969A6750022A67E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAF70C0E1969A6750022A67E /* InfoPlist.strings */; };
+		EAF70C121969A6750022A67E /* WhackAMoleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF70C111969A6750022A67E /* WhackAMoleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EAF70C091969A6750022A67E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAF70BD11969A6750022A67E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAF70BD81969A6750022A67E;
+			remoteInfo = WhackAMole;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EAF70BD91969A6750022A67E /* WhackAMole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhackAMole.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAF70BDC1969A6750022A67E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EAF70BDE1969A6750022A67E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EAF70BE01969A6750022A67E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EAF70BE21969A6750022A67E /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		EAF70BE61969A6750022A67E /* WhackAMole-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WhackAMole-Info.plist"; sourceTree = "<group>"; };
+		EAF70BE81969A6750022A67E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EAF70BEA1969A6750022A67E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EAF70BEC1969A6750022A67E /* WhackAMole-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhackAMole-Prefix.pch"; sourceTree = "<group>"; };
+		EAF70BED1969A6750022A67E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EAF70BEE1969A6750022A67E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EAF70BF11969A6750022A67E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		EAF70BF41969A6750022A67E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		EAF70BF61969A6750022A67E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EAF70BF71969A6750022A67E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EAF70BF91969A6750022A67E /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
+		EAF70BFA1969A6750022A67E /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		EAF70BFC1969A6750022A67E /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		EAF70BFE1969A6750022A67E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EAF70C041969A6750022A67E /* WhackAMoleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhackAMoleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAF70C051969A6750022A67E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EAF70C0D1969A6750022A67E /* WhackAMoleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WhackAMoleTests-Info.plist"; sourceTree = "<group>"; };
+		EAF70C0F1969A6750022A67E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EAF70C111969A6750022A67E /* WhackAMoleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhackAMoleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EAF70BD61969A6750022A67E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAF70BDF1969A6750022A67E /* CoreGraphics.framework in Frameworks */,
+				EAF70BE11969A6750022A67E /* UIKit.framework in Frameworks */,
+				EAF70BE31969A6750022A67E /* SpriteKit.framework in Frameworks */,
+				EAF70BDD1969A6750022A67E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAF70C011969A6750022A67E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAF70C061969A6750022A67E /* XCTest.framework in Frameworks */,
+				EAF70C081969A6750022A67E /* UIKit.framework in Frameworks */,
+				EAF70C071969A6750022A67E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EAF70BD01969A6750022A67E = {
+			isa = PBXGroup;
+			children = (
+				EAF70BE41969A6750022A67E /* WhackAMole */,
+				EAF70C0B1969A6750022A67E /* WhackAMoleTests */,
+				EAF70BDB1969A6750022A67E /* Frameworks */,
+				EAF70BDA1969A6750022A67E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EAF70BDA1969A6750022A67E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAF70BD91969A6750022A67E /* WhackAMole.app */,
+				EAF70C041969A6750022A67E /* WhackAMoleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAF70BDB1969A6750022A67E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAF70BDC1969A6750022A67E /* Foundation.framework */,
+				EAF70BDE1969A6750022A67E /* CoreGraphics.framework */,
+				EAF70BE01969A6750022A67E /* UIKit.framework */,
+				EAF70BE21969A6750022A67E /* SpriteKit.framework */,
+				EAF70C051969A6750022A67E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAF70BE41969A6750022A67E /* WhackAMole */ = {
+			isa = PBXGroup;
+			children = (
+				EAF70BED1969A6750022A67E /* AppDelegate.h */,
+				EAF70BEE1969A6750022A67E /* AppDelegate.m */,
+				EAF70BF01969A6750022A67E /* Main_iPhone.storyboard */,
+				EAF70BF31969A6750022A67E /* Main_iPad.storyboard */,
+				EAF70BF61969A6750022A67E /* ViewController.h */,
+				EAF70BF71969A6750022A67E /* ViewController.m */,
+				EAF70BF91969A6750022A67E /* MyScene.h */,
+				EAF70BFA1969A6750022A67E /* MyScene.m */,
+				EAF70BFC1969A6750022A67E /* Spaceship.png */,
+				EAF70BFE1969A6750022A67E /* Images.xcassets */,
+				EAF70BE51969A6750022A67E /* Supporting Files */,
+			);
+			path = WhackAMole;
+			sourceTree = "<group>";
+		};
+		EAF70BE51969A6750022A67E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EAF70BE61969A6750022A67E /* WhackAMole-Info.plist */,
+				EAF70BE71969A6750022A67E /* InfoPlist.strings */,
+				EAF70BEA1969A6750022A67E /* main.m */,
+				EAF70BEC1969A6750022A67E /* WhackAMole-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EAF70C0B1969A6750022A67E /* WhackAMoleTests */ = {
+			isa = PBXGroup;
+			children = (
+				EAF70C111969A6750022A67E /* WhackAMoleTests.m */,
+				EAF70C0C1969A6750022A67E /* Supporting Files */,
+			);
+			path = WhackAMoleTests;
+			sourceTree = "<group>";
+		};
+		EAF70C0C1969A6750022A67E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EAF70C0D1969A6750022A67E /* WhackAMoleTests-Info.plist */,
+				EAF70C0E1969A6750022A67E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAF70BD81969A6750022A67E /* WhackAMole */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAF70C151969A6750022A67E /* Build configuration list for PBXNativeTarget "WhackAMole" */;
+			buildPhases = (
+				EAF70BD51969A6750022A67E /* Sources */,
+				EAF70BD61969A6750022A67E /* Frameworks */,
+				EAF70BD71969A6750022A67E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhackAMole;
+			productName = WhackAMole;
+			productReference = EAF70BD91969A6750022A67E /* WhackAMole.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EAF70C031969A6750022A67E /* WhackAMoleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAF70C181969A6750022A67E /* Build configuration list for PBXNativeTarget "WhackAMoleTests" */;
+			buildPhases = (
+				EAF70C001969A6750022A67E /* Sources */,
+				EAF70C011969A6750022A67E /* Frameworks */,
+				EAF70C021969A6750022A67E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAF70C0A1969A6750022A67E /* PBXTargetDependency */,
+			);
+			name = WhackAMoleTests;
+			productName = WhackAMoleTests;
+			productReference = EAF70C041969A6750022A67E /* WhackAMoleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EAF70BD11969A6750022A67E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = ZeroLinux5;
+				TargetAttributes = {
+					EAF70C031969A6750022A67E = {
+						TestTargetID = EAF70BD81969A6750022A67E;
+					};
+				};
+			};
+			buildConfigurationList = EAF70BD41969A6750022A67E /* Build configuration list for PBXProject "WhackAMole" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EAF70BD01969A6750022A67E;
+			productRefGroup = EAF70BDA1969A6750022A67E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAF70BD81969A6750022A67E /* WhackAMole */,
+				EAF70C031969A6750022A67E /* WhackAMoleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EAF70BD71969A6750022A67E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAF70BFD1969A6750022A67E /* Spaceship.png in Resources */,
+				EAF70BFF1969A6750022A67E /* Images.xcassets in Resources */,
+				EAF70BF51969A6750022A67E /* Main_iPad.storyboard in Resources */,
+				EAF70BF21969A6750022A67E /* Main_iPhone.storyboard in Resources */,
+				EAF70BE91969A6750022A67E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAF70C021969A6750022A67E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAF70C101969A6750022A67E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAF70BD51969A6750022A67E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAF70BFB1969A6750022A67E /* MyScene.m in Sources */,
+				EAF70BF81969A6750022A67E /* ViewController.m in Sources */,
+				EAF70BEF1969A6750022A67E /* AppDelegate.m in Sources */,
+				EAF70BEB1969A6750022A67E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAF70C001969A6750022A67E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAF70C121969A6750022A67E /* WhackAMoleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAF70C0A1969A6750022A67E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAF70BD81969A6750022A67E /* WhackAMole */;
+			targetProxy = EAF70C091969A6750022A67E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EAF70BE71969A6750022A67E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAF70BE81969A6750022A67E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EAF70BF01969A6750022A67E /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAF70BF11969A6750022A67E /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		EAF70BF31969A6750022A67E /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAF70BF41969A6750022A67E /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		EAF70C0E1969A6750022A67E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAF70C0F1969A6750022A67E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EAF70C131969A6750022A67E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EAF70C141969A6750022A67E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EAF70C161969A6750022A67E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WhackAMole/WhackAMole-Prefix.pch";
+				INFOPLIST_FILE = "WhackAMole/WhackAMole-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EAF70C171969A6750022A67E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WhackAMole/WhackAMole-Prefix.pch";
+				INFOPLIST_FILE = "WhackAMole/WhackAMole-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EAF70C191969A6750022A67E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WhackAMole.app/WhackAMole";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WhackAMole/WhackAMole-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WhackAMoleTests/WhackAMoleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EAF70C1A1969A6750022A67E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WhackAMole.app/WhackAMole";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WhackAMole/WhackAMole-Prefix.pch";
+				INFOPLIST_FILE = "WhackAMoleTests/WhackAMoleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAF70BD41969A6750022A67E /* Build configuration list for PBXProject "WhackAMole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAF70C131969A6750022A67E /* Debug */,
+				EAF70C141969A6750022A67E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAF70C151969A6750022A67E /* Build configuration list for PBXNativeTarget "WhackAMole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAF70C161969A6750022A67E /* Debug */,
+				EAF70C171969A6750022A67E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EAF70C181969A6750022A67E /* Build configuration list for PBXNativeTarget "WhackAMoleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAF70C191969A6750022A67E /* Debug */,
+				EAF70C1A1969A6750022A67E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EAF70BD11969A6750022A67E /* Project object */;
+}
